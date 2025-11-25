@@ -24,11 +24,10 @@ const Header = () => {
     return (
         <div className='relative overflow-hidden h-screen customizecollro'>
            <div
-              className={`absolute left-0 top-0 h-screen bg-[#1b1b1b] backdrop-blur-3xl transition-all duration-1000 z-999 ${
+              className={`absolute left-0 top-0 h-screen flex items-center justify-center bg-[#1b1b10] backdrop-blur-3xl transition-all duration-1000 z-999 ${
                 shrink ? "w-0" : "w-screen"
               }`}
-            ><Link onClick={(e) => handleScrollToTop(e, "/")} href='/' className='cursor-pointer flex items-center justify-start Froggo-Logo'>
-                <Image className='w-full h-[22px] sm:h-[28px] 2xl:h-[34px]' src={logo} alt=''/></Link></div>
+            ></div>
             <div className="backgroiunposidhaef"></div>
             <NavBar/>
             <HeroPage/>
