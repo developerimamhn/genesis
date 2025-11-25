@@ -1,8 +1,14 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #000000;
+  --font-sans: "Inter", "Staff Grotesk Test", sans-serif;
+  --font-mono: "Inter", monospace;
+}
+
+a {
+  scroll-behavior: smooth;
 }
 
 @theme inline {
@@ -14,13 +20,2139 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: #000000;
+    --foreground: #000000;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+@font-face {
+  font-family: "Staff Grotesk Test";
+  src: url("./font/StaffGroteskTest-Medium-BF66385475c19b6.otf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Staff Grotesk Test";
+  src: url("./font/StaffGroteskTest-Regular-BF66385476bf383.otf")
+    format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Staff Grotesk Test";
+  src: url("./font/StaffGroteskTest-Bold-BF66385476837b7.otf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Inter";
+  src: url("./font/inter_Inter-Regular.woff") format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+#smooth-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+
+#smooth-content {
+  will-change: transform;
+}
+
+@layer utilities {
+  .nowbygxn{
+    color: #000;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 8px;
+    background: #FFF;
+    transition: 0.4s;
+    cursor: pointer;
+  }
+  .nowbygxn:hover{
+    background: #FFFFFFCC;
+  }
+  .listeateitems{
+    color: #F0F0F2;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    cursor: pointer;
+  }
+  .vinexwirtes{
+    color: #FFF;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.10);
+    transition: 0.4s;
+  }
+  .vinexwirtes:hover{
+    background: rgba(255, 255, 255, 0.07);
+  }
+  .cardonegradiens{
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    background: rgba(0, 0, 0, 0.00);
+  }
+  .ourexlauc{
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 14.4px */
+  }
+  .sparklafrom{
+    color: #FFF;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+  }
+  .vibesstyle{
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.40);
+    background: rgba(11, 11, 11, 0.16);
+  }
+  .backgrounone{
+    border-radius: 12px;
+    background: #FFF;
+    color: #0A0A0A;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+    text-transform: uppercase;
+  }
+  .backgorunds{
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    background: rgba(255, 255, 255, 0.02);
+    color: #FFF;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .consersn{
+    color: #FFF;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 36px */
+    text-transform: uppercase;
+  }
+  .itesmracenas{
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    text-transform: uppercase;
+  }
+  .gensiloundces{
+    color: #FFF;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+  .comprecsupform{
+    color: #FFF;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 4px 4px rgba(0, 0, 0, 0.15), 0 6px 16px rgba(0, 0, 0, 0.15);
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 62.4px */
+  }
+  .numverinval{
+    color: rgba(255, 255, 255, 0.80);
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+  }
+  .numverinval{
+    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px];
+  }
+  .numbsetis{
+    color: #FFF;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 120%; /* 48px */
+  }
+  .numbsetis{
+    @apply text-[16px] sm:text-[20px] md:text-[24px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px];
+  }
+  .trmatching{
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .trmatching{
+    @apply py-[13px] sm:py-[14px] md:py-[15px] lg:py-[16px] xl:py-[20px] 2xl:py-[24px] px-[20px] sm:px-[24px] md:px-[32px] lg:px-[36px] xl:px-[40px] 2xl:px-[48px] ;
+  }
+  .projemanx{
+    color: #FFF;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 24px */
+    text-transform: uppercase;
+  }
+  .projemanx{
+    @apply text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[20px] pb-[13px] sm:pb-[14px] md:pb-[15px] lg:pb-[16px] xl:pb-[20px] 2xl:pb-[24px];
+  }
+  .prmdash{
+    border-radius: 30px;
+    /* border: 0.7px solid rgba(255, 255, 255, 0.40); */
+    /* background: linear-gradient(0deg, rgba(208, 208, 208, 0.50) 0%, rgba(208, 208, 208, 0.50) 100%), rgba(0, 0, 0, 0.10); */
+    background-blend-mode: color-burn, luminosity;
+    box-shadow: 0 -0.5px 1px 0 rgba(255, 255, 255, 0.30) inset, 0 -0.5px 1px 0 rgba(255, 255, 255, 0.25) inset, 0 1.5px 4px 0 rgba(0, 0, 0, 0.08) inset, 0 1.5px 4px 0 rgba(0, 0, 0, 0.10) inset;
+    backdrop-filter: blur(50px);
+  }
+  .prmdash{
+    @apply p-[16px] sm:p-[20px] md:p-[24px] lg:p-[32px] xl:p-[36px] 2xl:p-[40px];
+  }
+  .viewallinsteaeds{
+    color: #FFF;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    /* line-height: normal; */
+    border-radius: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0.00);
+  }
+  .gentermanitems{
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .gentermanitems{
+    
+  }
+  .goldenslinea{
+    color: #FFF;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .goldenslinea,.viewallinsteaeds{
+    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px];
+  }
+  .filtebluasee{
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, rgba(255, 255, 255, 0.08) 100%);
+    backdrop-filter: blur(8px);
+  }
+  .yearsadate {
+    color: #fff;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .yearsadate {
+    @apply text-[16px] sm:text-[20px] md:text-[24px] lg:text-[32px] xl:text-[36px] 2xl:text-[40px];
+  }
+  .yearsgretesa {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .yearsgretesa {
+    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px];
+  }
+  .misssfasttea {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .misssfasttea {
+    @apply text-[14px] sm:text-[15px] md:text-[16px] lg:text-[20px] xl:text-[24px] 2xl:text-[32px];
+  }
+  .containexrtmiss {
+    border-radius: 24px;
+    /* border: 0.7px solid rgba(255, 255, 255, 0.4); */
+    /* background: linear-gradient(
+        0deg,
+        rgba(208, 208, 208, 0.5) 0%,
+        rgba(208, 208, 208, 0.5) 100%
+      ),
+      rgba(0, 0, 0, 0.1); */
+    background-blend-mode: color-burn, luminosity;
+    box-shadow: 0 -0.5px 1px 0 rgba(255, 255, 255, 0.3) inset,
+      0 -0.5px 1px 0 rgba(255, 255, 255, 0.25) inset,
+      0 1.5px 4px 0 rgba(0, 0, 0, 0.08) inset,
+      0 1.5px 4px 0 rgba(0, 0, 0, 0.1) inset;
+    backdrop-filter: blur(50px);
+  }
+  .containexrtmiss {
+    @apply p-[14px] sm:p-[15px] md:p-[16px] lg:p-[20px] xl:p-[24px] 2xl:p-[32px];
+  }
+  .backgroiunposidhaef {
+    background: radial-gradient(
+      50% 56.08% at 50% 43.92%,
+      rgba(0, 0, 0, 0) 0%,
+      #000 100%
+    );
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  .topethreaincobtn {
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 4px 4px rgba(0, 0, 0, 0.15),
+      0 6px 16px rgba(0, 0, 0, 0.15);
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 120%; /* 21.6px */
+    letter-spacing: 3.6px;
+    text-transform: uppercase;
+    background: rgba(255, 255, 255, 0.08);
+  }
+  .topethreaincobtn {
+    @apply px-[13px] sm:px-[14px] md:px-[15px] lg:px-[16px] xl:px-[20px] 2xl:px-[24px] py-[7px] md:py-[9px] xl:py-[12px];
+  }
+  .growingstabtn {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(0, 0, 0, 0);
+    color: #fff;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .growingstabtn,
+  .buttonauditelt {
+    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px];
+  }
+  .selectboxseZ {
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 19.2px */
+  }
+  .copyright {
+    color: rgba(240, 240, 242, 0.80);
+    font-family: 'Satoshi';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+  .subscrbuttonmail {
+    border-radius: 30px;
+    background: linear-gradient(180deg, #4f1ad6 0%, #8059e3 100%);
+    box-shadow: 0 0.602px 3.011px -1px rgba(79, 26, 214, 0.29),
+      0 2.289px 11.443px -2px rgba(79, 26, 214, 0.28),
+      0 10px 50px -3px rgba(79, 26, 214, 0.2);
+    border: 3px solid rgba(255, 255, 255, 0.15);
+    color: #fff;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 26px; /* 185.714% */
+    letter-spacing: -0.5px;
+  }
+  .inputfielssec {
+    border-radius: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  .inputfimain {
+    color: rgba(255, 255, 255, 0.6);
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16%;
+  }
+  .subsecnow {
+    color: #fff;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+  }
+  .buttonseccmainsatg {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(180deg, #4f1ad6 0%, #8059e3 100%);
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /*  */
+    letter-spacing: -0.5px;
+    transition: 0.4;
+  }
+  .buttonseccmainsatg:hover {
+    background: linear-gradient(70deg, #4f1ad6 0%, #8059e3 100%);
+  }
+  .nameareasectionmail::placeholder {
+    color: rgba(255, 255, 255, 0.32);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .nameareasectionmail {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(4.5px);
+    color: rgba(255, 255, 255, 0.32);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .cotnacktoutprojd {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    backdrop-filter: blur(4.5px);
+  }
+  .contackpaone {
+    color: #fff;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%; /* 70.2px */
+  }
+  .litecinconwebsite {
+    color: #8f89a7;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+  .outweb {
+    color: #8f89a7;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%; /*  */
+  }
+  .ourmailcon {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144.444%; /*  */
+    letter-spacing: -0.5px;
+  }
+  .contackmailsse {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(12px);
+  }
+  .downloadbutton {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "DM Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 162.5%;
+    letter-spacing: -0.5px;
+    border-radius: 42px;
+    /* border: 1px solid rgba(255, 255, 255, 0.15); */
+    /* ransition: 0.5s; */
+    /* background: none; */
+  }
+  .downloadbutton:hover {
+    /* border-radius: 42px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    background: linear-gradient(180deg, #4F1AD6 0%, #8059E3 100%); */
+  }
+  .gpgsignbutton {
+    color: #fff;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 19.6px */
+    border-radius: 80px;
+    border: 1px solid rgba(128, 89, 227, 0.5);
+  }
+  .lichangwinds {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: "Inter";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 24px */
+  }
+  .dowloheadibng {
+    color: #FFF;
+    font-family: "Staff Grotesk Test";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 28.8px; /* 120% */
+  }
+  /* .downloaddifferentland {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.04) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    transition: 0.4s;
+  }
+  .downloaddifferentland:hover {
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(
+      180deg,
+      rgba(128, 89, 227, 0.15) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  } */
+  .lineroneaszd {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.15) 50%,
+      rgba(255, 255, 255, 0) 100%
+    );
+    width: 100%;
+    height: 2px;
+  }
+  .sodigasaswe {
+    color: #fff;
+    text-align: center;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 30px */
+  }
+  .fdisannumbelit {
+    color: #c6c3d2;
+    text-align: center;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+  }
+  .litecoin {
+    border-radius: 80px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .borderanotherfeds {
+    border-radius: 20px;
+    background: linear-gradient(
+        0deg,
+        rgba(26, 64, 214, 0) 62.59%,
+        #1a40d6 154.74%
+      ),
+      #080808;
+  }
+  .sdvdsazwsavsdv {
+    border-radius: 50px 50px 24px 24px;
+    background: linear-gradient(
+        180deg,
+        rgba(39, 36, 253, 0.27) 0%,
+        rgba(39, 36, 253, 0) 50%
+      ),
+      #000;
+  }
+  @keyframes textColorFade {
+    0% {
+      color: #565363;
+    }
+    100% {
+      color: #fff;
+    }
+  }
+
+  .fade-text {
+    animation: textColorFade 2s ease-in-out forwards;
+  }
+
+  .workingtext {
+    /* animation: textColorFade 2s ease-in-out forwards; */
+    color: #fff;
+    text-align: center;
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%;
+  }
+  .customizecollro {
+    background: url(./component/image/headerimage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .sauendinas {
+    border-radius: 24px 24px 0 0;
+    background: rgba(255, 255, 255, 0.04);
+    backdrop-filter: blur(150px);
+  }
+
+  @keyframes border-spin {
+    0% {
+      left: 0%;
+    }
+    100% {
+      left: 100%;
+    }
+  }
+
+  .animate-border-spin {
+    animation: border-spin 4s linear infinite;
+    animation-play-state: paused;
+  }
+
+  .group:hover .animate-border-spin {
+    animation-play-state: running;
+  }
+
+  .whitepase {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "MD Primer Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  .netkcasetge {
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .spalisdnwsa {
+    background: linear-gradient(
+      180deg,
+      rgba(1, 2, 20, 0.2) 24.34%,
+      #010214 63.81%
+    );
+    width: 100%;
+    height: 100%;
+  }
+  .bordeingandhowto {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    transition: 0.4s;
+  }
+  .bordeingandhowto:hover {
+    border-radius: 16px;
+    border-left: 2px solid var(--Stock, rgba(255, 255, 255, 0.06));
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0);
+  }
+  .howitworks {
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #03010f;
+  }
+  .brainradius {
+    border-radius: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+      50% 50% at 50% 50%,
+      rgba(255, 255, 255, 0) 71.06%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+  .braint {
+    color: #fff;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; 
+    text-transform: uppercase;
+  }
+  .braintaras {
+    border-radius: 150px 150px 20px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: radial-gradient(
+      57.87% 57.87% at 50% 50%,
+      rgba(255, 255, 255, 0) 71.06%,
+      rgba(255, 255, 255, 0.1) 100%
+    );
+  }
+  .instelligence {
+    color: #fff;
+    font-family: "MD Primer Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+  }
+  .discoursemetrue {
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%;
+    letter-spacing: 2.56px;
+    text-transform: uppercase;
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.25) 0%,
+      #fff 49.52%,
+      rgba(255, 255, 255, 0.25) 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .privacypolicysfse {
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "MD Primer Test";
+    font-size: 400px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: normal;
+    letter-spacing: 59.5px;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.24) 0%,
+      rgba(57, 6, 113, 0.4) 82.94%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .footersvg {
+    background: linear-gradient(180deg, #010214 0%, #3e067a 100%);
+  }
+  .card-section {
+    position: relative;
+    cursor: none; /* hide default cursor */
+  }
+
+  .custom-cursor {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .card-section:hover + .custom-cursor {
+    opacity: 1;
+  }
+  .ortherasd {
+    border: 2px solid rgba(255, 255, 255, 0.06);
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      rgba(255, 255, 255, 0) 100%
+    );
+  }
+
+  .ourthreeline {
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: #03010f;
+  }
+  .ourpratens {
+    color: #fff;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "MD Primer Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+    text-transform: uppercase;
+    border-radius: 30px;
+  }
+  .Tradealltypinws {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  .numberingtest {
+    color: #fff;
+    font-family: "MD Primer Test";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 102.857%;
+  }
+  .borderingandpadding {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: #010214;
+  }
+  .borderingandpadding {
+    @apply rounded-[15px] sm:rounded-[24px] lg:rounded-[32px];
+  }
+  .peoexgols {
+    color: #9ca3af; /* Inactive tab color */
+  }
+  .peoexgols:hover {
+    color: #eaf4fe; /* Hover color */
+  }
+  .buttonone {
+    border-radius: 6px;
+    background: rgba(218, 255, 228, 0.1);
+    color: var(--White, #fff);
+    text-align: right;
+    font-family: "Switzer", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .buttontwo {
+    border-radius: 6px;
+    background: var(--03-fc-9-e, #03fc9e);
+    color: var(--Black, #030312);
+    text-align: right;
+    font-family: "Switzer", sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  .allhastinwsaws {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Switzer", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+  }
+  .allhastinwsaws {
+    @apply text-[10px] sm:text-[11px] md:text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[14px];
+  }
+  .bodeinggaas {
+    border-radius: 10px;
+    border: 1px solid rgba(3, 252, 158, 0.12);
+    background: rgba(3, 252, 158, 0.01);
+    backdrop-filter: blur(22px);
+  }
+  .peoexgolsss {
+    color: #03fc9e;
+    text-align: right;
+    font-family: "Switzer", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .peoexgols {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "Switzer", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+  .peoexgols,
+  .peoexgolsss,
+  .buttonone {
+    @apply text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px];
+  }
+  .buttonsflesxisnwa {
+    fill: rgba(3, 252, 158, 0.01);
+    stroke-width: 1px;
+    stroke: rgba(3, 252, 158, 0.12);
+    backdrop-filter: blur(22px);
+    width: 100%;
+  }
+  @import url("https://fonts.cdnfonts.com/css/switzer");
+
+  /* Class for changePositive: true (green) */
+  .change-positive {
+    color: #03fc9e;
+    font-family: "Switzer", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(3, 252, 158, 0.1);
+    background: rgba(3, 252, 158, 0.1);
+  }
+
+  /* Class for changePositive: false (red) */
+  .change-negative {
+    color: #fb4950;
+    font-family: "Switzer", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    display: inline-flex;
+    padding: 8px 16px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 30px;
+    border: 1px solid rgba(251, 73, 80, 0.1);
+    background: rgba(251, 73, 80, 0.1);
+  }
+  .learndihnsaz {
+    color: var(--03-fc-9-e, #03fc9e);
+    text-align: center;
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 28.8px */
+  }
+  .cicleone {
+    border-radius: 10px;
+    background: var(--212227, #212227);
+  }
+  .posiningsezx {
+    border-radius: 43px;
+    background: rgba(3, 252, 158, 0.1);
+  }
+  .takeexper {
+    color: var(--fdfcff, #fdfcff);
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 150% */
+  }
+  .inturiss {
+    color: var(--bdbdbd, #bdbdbd);
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+  }
+  .eastrasin {
+    color: var(--fdfcff, #fdfcff);
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 32.2px; /* 128.8% */
+  }
+  .borindsas {
+    border-radius: 10px;
+    border: 1px solid rgba(253, 252, 255, 0.1);
+  }
+
+  .artoutsmartins {
+    color: var(--fdfcff, #fdfcff);
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 18.4px; /* 115% */
+  }
+  .vadesigns {
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: linear-gradient(90deg, rgba(10, 10, 10, 0.00) 22.74%, #0A0A0A 80.78%);
+    mix-blend-mode: luminosity;
+  }
+  .bitstartp {
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+
+  .bitstartpsss {
+    color: rgba(255, 255, 255, 0.80);
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 27px */
+  }
+  .tradines {
+    color: #fff;
+    text-shadow: 0 4px 20px rgba(0, 0, 0, 0.35), 0 4px 4px rgba(0, 0, 0, 0.15),
+      0 6px 16px rgba(0, 0, 0, 0.15);
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 110%; /* 70.4px */
+  }
+  .divisiolast {
+    color: #f3e2ff;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%; /* 47.6px */
+  }
+  .fontent {
+    font-weight: 800 !important;
+  }
+  .inpuitiname {
+    color: #8c5ab0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 42px */
+  }
+  .welcobits {
+    color: var(--03-fc-9-e, #03fc9e);
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 110%; /* 17.6px */
+    letter-spacing: 1.28px;
+    text-transform: uppercase;
+  }
+  .singpupagelogin {
+    background: #c293f7;
+  }
+  .signpuptatg {
+    color: #203dcd;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%; /* 71.4px */
+    letter-spacing: 2.1px;
+  }
+
+  .signandpage {
+    background: #d3dcff;
+  }
+  .sta7i09w {
+    color: #f3e2ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%; /* 118.8px */
+  }
+  .featuredescription {
+    color: #f3e2ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+  }
+  .featuretitle {
+    color: #f3e2ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%; /* 42px */
+  }
+  .dontmissing {
+    color: #f3e2ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120% !important; /* 42px */
+  }
+  .readdividinaga {
+    color: #e5c1ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 26px */
+    background: var(--gfxdsdgh, #1e53ff);
+  }
+  .dividwallet {
+    color: #e5c1ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 170%; /* 54.4px */
+    letter-spacing: 1.6px;
+  }
+  .selfcountopdia {
+    color: #f3e2ff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 140%; /* 140px */
+  }
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-15px);
+    }
+  }
+
+  /* Apply the animation with smooth timing */
+  .bounce {
+    animation: bounce 1.5s ease-in-out infinite;
+  }
+  .herobot {
+    background: #9226e0;
+  }
+  .fridendfamph {
+    color: #9226e0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+  }
+  .maneychange {
+    color: #9226e0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 120%; /* 42px */
+  }
+  .scaldowlaodads {
+    color: #9226e0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 130%; /* 63.774px */
+  }
+  .fotoerheadesecton {
+    color: #fff;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 38.4px */
+  }
+  .digibytefat {
+    color: #b4b3b7 !important;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+  .inpoutstys {
+    color: #b4b3b7;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%;
+  }
+
+  .inpoutstys::placeholder {
+    color: #b4b3b7;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+
+  .roundclidenbttn {
+    border-radius: 180px;
+    border: 1px solid #1f1c29;
+    background: #070312;
+  }
+  .stateimageds {
+    color: #fff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(106deg, #5c2fda 36.54%, #7450ea 81.73%);
+  }
+  .colscatavazsd {
+    color: #b4b3b7;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 28.8px */
+  }
+
+  .voerflow {
+    background: linear-gradient(
+        0deg,
+        rgba(39, 36, 253, 0.16) 0%,
+        rgba(39, 36, 253, 0) 100%
+      ),
+      #000;
+  }
+  .extasiscuting {
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%; /* 21px */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.16);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .whatisextass {
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%; /* 27px */
+    text-transform: uppercase;
+  }
+  .howtobue {
+    background: linear-gradient(180deg, #f3f3f6 9.26%, #663dde 65.19%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .lineronezse {
+    background-color: #522fc780;
+  }
+  .lineronesssss {
+    background: linear-gradient(90deg, #070312 42.15%, #07031200 100%);
+    flex-shrink: 0;
+  }
+  .lineronesssss22 {
+    background: linear-gradient(270deg, #070312 42.15%, #07031200 100%);
+    flex-shrink: 0;
+  }
+  .trustedinses {
+    color: #b4b3b7;
+    text-align: center;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .gradient-border {
+    border-bottom: 0.783px solid transparent;
+    border-image: linear-gradient(
+      90deg,
+      rgba(34, 35, 56, 0) 0%,
+      #302a61 50.16%,
+      rgba(34, 35, 56, 0) 100%
+    );
+    border-image-slice: 1;
+  }
+
+  .enterimail {
+    color: var(--Color-Paragraph, #7f8799);
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 18.8px */
+  }
+  .subscriobesec {
+    color: #d0d1e3;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 140%; /* 26.32px */
+  }
+  .markerleines {
+    border-radius: 929.817px;
+    opacity: 0.25;
+    background: rgba(97, 58, 212, 0.7);
+    filter: blur(195.8333282470703px);
+  }
+  .borderingtextws {
+    border-radius: 25.067px;
+    background: rgba(255, 255, 255, 0);
+    box-shadow: 0px 0px 25.067px 0px rgba(199, 211, 234, 0.04) inset;
+  }
+  .gradient-class {
+    background: linear-gradient(93deg, #6d43e3 0.52%, #ab8eff 27.29%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .lineronesthews {
+    border-radius: 1513.491px;
+    opacity: 0.9;
+    background: linear-gradient(90deg, #4f2ac0 0%, #8b65fe 100%);
+    filter: blur(197.39999389648438px);
+    width: 100vh;
+    height: 152.814px;
+    transform: rotate(25.732deg);
+    flex-shrink: 0;
+  }
+  /* Add this to your global CSS or component's CSS */
+  .swiper-button-next,
+  .swiper-button-prev {
+    background: none !important;
+    color: white; /* Or any text color you want */
+  }
+
+  /* Remove the default arrow icons */
+  .swiper-button-next::after,
+  .swiper-button-prev::after {
+    display: none !important;
+  }
+
+  .dmitrymishni {
+    color: #d0d1e3;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 18.8px */
+  }
+  .chieffounder {
+    color: #9da4b2;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 20.445px */
+  }
+  .buggningsec {
+    border-radius: 12.533px !important;
+    background: rgba(255, 255, 255, 0) !important;
+    box-shadow: 0px 0px 37.6px 0px rgba(199, 211, 234, 0.05) inset !important;
+  }
+  .solonasection {
+    border-radius: 18.8px;
+    border: 0.783px solid rgba(34, 35, 56, 0);
+    background: rgba(186, 214, 247, 0.02);
+    padding: 9.4px;
+  }
+  .animate-logoFadeIn {
+    animation: logoFadeIn 0.6s ease-out forwards;
+  }
+
+  @keyframes logoFadeIn {
+    0% {
+      opacity: 0;
+      transform: scale(0.9);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  .browseaudit {
+    color: #d0d1e3;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 20.68px */
+  }
+  .stakingreas {
+    color: #d0d1e3;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 160%; /* 30.08px */
+  }
+  .oursecton {
+    border-radius: 9.4px;
+    background: linear-gradient(180deg, #4e27bc 0%, #a68af9 100%);
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 130%; /* 17.312px */
+  }
+  .onesborder {
+    background: linear-gradient(180deg, #4e27bc 0%, #a68af9 100%) !important;
+    border-radius: 23px;
+  }
+  .refresingsection {
+    color: #fff;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 16.92px */
+  }
+  .priceingxed {
+    color: #9fa3bb;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 15.04px */
+  }
+  .ngasings {
+    color: #d0d1e3;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%; /* 18.8px */
+  }
+  .bordering {
+    border-radius: 9.4px;
+    border: 0.783px solid #25263c;
+  }
+  .howmat {
+    color: #d0d1e3;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 155%; /* 19.427px */
+  }
+  .byeextraone {
+    /* border-radius: 47px; */
+    /* background: linear-gradient(180deg, #4E27BC 0%, #A68AF9 100%); */
+    color: #fff;
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 16.92px */
+  }
+  .byeextra {
+    border-radius: 47px;
+    background: linear-gradient(180deg, #4e27bc 0%, #a68af9 100%);
+    color: #fff;
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 16.92px */
+  }
+  .buycrxsecton {
+    border-radius: 18.8px;
+    border: 0.783px solid #2d2f42;
+    background: rgba(255, 255, 255, 0.01);
+    box-shadow: 0px 0px 37.6px 0px rgba(199, 211, 234, 0.05) inset;
+    backdrop-filter: blur(3.133333206176758px);
+    width: 100%;
+    max-width: 401.85px;
+    margin: 0 auto;
+  }
+  .buttonaudit-3 {
+    border-radius: 47px;
+    background: linear-gradient(180deg, #4e27bc 0%, #a68af9 100%);
+    backdrop-filter: blur(3.133333206176758px);
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 16.92px */
+  }
+  .acqueriction {
+    border-radius: 25.067px;
+    border: 0.783px solid #2d2f42;
+    background: #0e0e27;
+  }
+  .linerone {
+    opacity: 0.3;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.2) 0%,
+      #fff 50.16%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+    width: 1.175px;
+    flex-shrink: 0;
+  }
+  .projctsvalue {
+    color: #fff;
+    text-align: center;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 145%; /* 24.988px */
+  }
+  .locedmaring {
+    color: #fff;
+    text-align: center;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 37.6px */
+  }
+  .maringpriceingsec {
+    border-radius: 25.067px;
+    border: 0.783px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.03);
+    backdrop-filter: blur(4.699999809265137px);
+  }
+  .innovationsater {
+    border-radius: 60px;
+    border: 1px solid #5c2fda;
+    color: #b4b3b7;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+  .backgroundimageheader {
+    border-radius: 0px 0px 31.333px 31.333px;
+    background: linear-gradient(
+      180deg,
+      #010214 0%,
+      #010214 16.55%,
+      #4e27bc 63.32%,
+      #a68af9 100%
+    );
+  }
+  .buttonaudit {
+    border-radius: 40px;
+    background: var(--03-fc-9-e, #03fc9e);
+    color: var(--000000, #000);
+    text-align: center;
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    text-transform: capitalize;
+    border: 1px solid var(--03-fc-9-e, #03fc9e);
+    transition: 0.5s;
+  }
+
+  .buttonaudit:hover {
+    border-radius: 40px;
+    background: rgba(3, 252, 158, 0.1);
+    color: var(--03-fc-9-e, #03fc9e);
+    text-align: center;
+    font-family: "Graphik LCG";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 24px */
+    text-transform: capitalize;
+  }
+
+  /* .borderingconent{
+  border-radius: 80px;
+  padding: 4px;
+  background: linear-gradient(260deg, rgba(192, 68, 255, 0.00) 42.49%, rgba(192, 68, 255, 0.04) 100%), rgba(255, 255, 255, 0.08);
+} */
+
+  .buttonauditelt {
+    color: #000;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    border-radius: 8px;
+    background: #fff;
+    transition: 0.4s;
+  }
+  .buttonauditelt:hover {
+    background: #e0e0e0;
+    color: #141414;
+  }
+  .svgsasdf {
+    border-radius: 40px;
+    background: linear-gradient(
+      0deg,
+      rgba(79, 26, 214, 0.08) 0%,
+      rgba(153, 153, 153, 0.1) 100%
+    ) !important;
+    backdrop-filter: blur(2.5px);
+  }
+
+  .buttonauditeltsss {
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%; /*  */
+    letter-spacing: -0.5px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(2.5px);
+    transition: 0.4s;
+  }
+  .buttonauditeltsss:hover {
+    font-family: "General Sans";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 162.5%; /*  */
+    letter-spacing: -0.5px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: linear-gradient(90deg, #fff 0%, rgba(255, 255, 255, 0.8) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    backdrop-filter: blur(2.5px);
+  }
+
+  .linersext {
+    border-bottom: 0.78px solid;
+    border-image-source: linear-gradient(
+      90deg,
+      #010214 0%,
+      rgba(55, 57, 82, 0.6) 50.16%,
+      #010214 100%
+    );
+  }
+  .privacypolicy {
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 140% */
+  }
+  .privacypolicy:hover {
+    background: linear-gradient(270deg, #9280fc 0%, #c966ff 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* 140% */
+  }
+  .compais {
+    color: var(--White, #fff);
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .lastpadding {
+    color: #c7c9d1;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 157.143% */
+  }
+  .meedicalkitslist {
+    @apply text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[14px];
+  }
+  .meedicalkitslist {
+    color: #c7c9d1;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 200%; /* 28px */
+  }
+  .golobalmarketes {
+    color: #f5fcff !important;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 150%;
+  }
+  .getstart {
+    border-radius: 8px;
+    background: #070510;
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    line-height: 24.75px; /* 137.5% */
+  }
+  .lenerone {
+    background: linear-gradient(88deg, #070510 0%, #07051000 100%);
+  }
+  .lenertwo {
+    background: linear-gradient(273deg, #070510 0%, #07051000 100%);
+  }
+  .weworkdbest {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 110%; /* 70.4px */
+    text-align: center;
+  }
+
+  .outlideopos {
+    color: #6f41d2;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 150;
+    line-height: 110%;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  @keyframes infinite-scroll {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  .scroll-container {
+    display: flex;
+    overflow: hidden;
+  }
+
+  .scroll-content {
+    display: flex;
+    align-items: center;
+    animation: infinite-scroll 40s linear infinite;
+    position: relative;
+    z-index: 10;
+  }
+
+  .desktoppage {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.02);
+  }
+  .desktopverson {
+    color: #fff;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 600;
+    line-height: 30px; /* 125% */
+  }
+  .popularmost {
+    color: #fff;
+    text-align: center;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 19.2px; /* 160% */
+    display: inline-flex;
+    padding: 5px 15px 6px 14px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 76px;
+    border: 1px solid #225052;
+    background: #173f46;
+  }
+  .statebutton {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24.75px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    transition: 0.5s;
+  }
+  .statebutton:hover {
+    background: #fff;
+    color: #001;
+  }
+  .tradinplasds {
+    color: var(--White, #fff);
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 21px; /* 150% */
+  }
+  .idealfornew {
+    color: var(--White, #fff);
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .MinDeposit {
+    color: var(--Paragraph, #c7c9d1);
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+  }
+  .Heading20 {
+    color: var(--White, #fff);
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 700;
+    line-height: 48px;
+  }
+  .stateclassname {
+    color: #fff;
+    font-family: "Plain";
+    font-style: normal;
+    line-height: 28.558px; /* 118.992% */
+  }
+  .stareings {
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    background: rgba(255, 255, 255, 0.04);
+  }
+  .xonic {
+    color: var(--black, #070510);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 150%; /* 27px */
+  }
+  .explab {
+    color: var(--black, #070510);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 110%; /* 70.4px */
+  }
+  .backgroundline {
+    background: radial-gradient(
+      41.77% 41.77% at 50% 50%,
+      rgba(7, 5, 16, 0.6) 0%,
+      #070510 100%
+    );
+  }
+  .numberingpositioning {
+    color: #fff;
+    text-align: center;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+  }
+  .padingfoxing {
+    color: #b4b3b7;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 25.6px */
+  }
+  .forex {
+    color: #fff;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  .foxbackgron {
+    position: relative;
+    border-radius: 20px;
+    border: 1px solid #171127;
+    overflow: hidden;
+    transition: 0.5s;
+    background: linear-gradient(195deg, #1f1731 -12.35%, #0c0817 74.08%);
+  }
+
+  /* Add a pseudo-element for hover animation */
+  .foxbackgron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    background: linear-gradient(360deg, #1f1731 -12.35%, #0c0817 74.08%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    z-index: 0;
+  }
+
+  .foxbackgron:hover::before {
+    opacity: 1;
+  }
+
+  /* Make sure your content is above the pseudo-element */
+  .foxbackgron > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  .leveragefinancial {
+    color: #818499;
+    text-align: center;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 165%; /* 25.85px */
+  }
+  .headerbackgronsdvg {
+    /* border-image-source: linear-gradient(90deg, #010214 0%, rgba(55, 57, 82, 0.6) 50.16%, #010214 100%); */
+    /* border-bottom-width: 0.78px;
+    border-style: solid; */
+
+    /* border-bottom: 1px solid rgba(255, 255, 255, 0.08); */
+    background: radial-gradient(
+      50% 56.08% at 50% 43.92%,
+      rgba(0, 0, 0, 0) 0%,
+      #000 100%
+    );
+    position: relative;
+    z-index: 99;
+    width: 1920px;
+    height: 92px;
+    flex-shrink: 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+  .Frame9 {
+    border-radius: 8px;
+    background: #fff;
+    color: var(--black, #070510);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+  }
+  .Frame10 {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+  }
+  .InvestTodayBuildASecuredTomorrow {
+    color: #9226e0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 200%; /* 80px */
+  }
+  .buttonaudit-2 {
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(106deg, #5c2fda 36.54%, #7450ea 81.73%);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    transition: 1s;
+  }
+  .buttonaudit-5 {
+    border-radius: 50px;
+    border: 1px solid #5c2fda;
+    color: #b4b3b7;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    transition: 1s;
+  }
+  .buttonaudit-5:hover {
+    border-radius: 50px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: linear-gradient(106deg, #5c2fda 36.54%, #7450ea 81.73%);
+    color: #fff;
+    font-family: "Segoe UI", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 160%; /* 32px */
+    transition: 1s;
+  }
+  .buttonaudit-2:hover {
+    color: #fff;
+    background: none;
+    border: 1px solid #5c2fda;
+  }
+  .fonteight {
+    font-weight: 800;
+    font-family: "Plain";
+  }
+  .fontthree {
+    font-weight: 100;
+    font-family: "Plain";
+  }
+  .TradeLikeAProWithXonicCapital {
+    color: #9226e0;
+    font-family: "Segoe UI";
+    font-style: normal;
+    font-weight: 800;
+    line-height: 100%; /* 180px */
+  }
+  .gradientuser {
+    background: linear-gradient(0deg, #5c2fda 4.39%, #8d70ef 22.63%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  .TradeLikeAProWithXonicCapitalchalline {
+    color: #f0f1fb;
+    text-align: center;
+    font-family: "Onest";
+    font-style: normal;
+    font-weight: 500;
+    line-height: 120%; /* 67.68px */
+  }
+  .custom-select-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 78px;
+  }
+
+  select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 78px;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    outline: none;
+  }
+
+  .custom-arrow {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+  }
+
+  .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 998;
+    transition: 0.5s;
+    transition: background 0.4s ease, padding 0.4s ease;
+    opacity: 0;
+    animation: slideUp 0.6s 0.4s ease forwards;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    /* backdrop-filter: blur(10px); */
+    padding-left: 0%;
+    padding-right: 0%;
+  }
+
+  .header.scrolled {
+    background: #15161b7e;
+    /* border-image-source: linear-gradient(90deg, #010214 0%, rgba(55, 57, 82, 0.6) 50.16%, #010214 100%); */
+    /* border-bottom-width: 0.78px; */
+    /* border-style: solid; */
+    /* background: linear-gradient(90deg, #010214ec 0%, rgba(55, 57, 82, 0.6) 50.16%, #010214e5 100%); */
+    opacity: 10%;
+    transition: 0.5s;
+    backdrop-filter: blur(10px);
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+  /* Slide-up animation */
+  @keyframes slideUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  .loginareas {
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(255, 255, 255, 0.04);
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+  .esistareas {
+    border-radius: 8px;
+    background: #fff;
+    color: var(--black, #070510);
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Plain";
+    font-style: normal;
+    font-weight: 300;
+    line-height: 100%;
+  }
+  .Link-manu-bar {
+    color: #fff;
+    text-align: center;
+    font-family: "Staff Grotesk Test";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 140%; /* */
+  }
+  .Link-manu-bar {
+    @apply text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] xl:text-[13px] 2xl:text-[14px] duration-300 text-[#C6C3D2]  hover:text-[#fff];
+  }
+  .backgroundheader {
+    background: linear-gradient(180deg, #141024 0%, #070510 50%);
+  }
+  .coonatainaedgaewf {
+    border-radius: 50px 50px 24px 24px;
+    background: linear-gradient(
+        180deg,
+        rgba(39, 36, 253, 0.27) 0%,
+        rgba(39, 36, 253, 0) 50%
+      ),
+      #000;
+  }
+  .leadingsderad {
+    border-radius: 20px;
+    border: 2px solid #1a40d6;
+    background: linear-gradient(
+        0deg,
+        rgba(26, 64, 214, 0) 62.59%,
+        #1a40d6 154.74%
+      ),
+      #080808;
+  }
+  .leadingsectionarea {
+    background: linear-gradient(
+        360deg,
+        rgba(39, 36, 253, 0.16) 0%,
+        rgba(39, 36, 253, 0) 50%
+      ),
+      #000;
+  }
 }
