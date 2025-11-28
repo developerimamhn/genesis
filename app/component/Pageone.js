@@ -5,7 +5,8 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import React, { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
-import serimagewe from './image/0_Glowing_Colorful_3840x2160 (1) 1.png';
+import Video from 'next-video';
+import myVideo3 from '../../videos/4_Astronaut.mp4';
 
 const data = [
   {
@@ -165,7 +166,21 @@ const Pageone = () => {
           </linearGradient>
           </defs>
           </svg>
-          <Image className='absolute top-0 left-0 w-full -z-px' src={serimagewe} alt='Loading...'/>
+          <div
+            class="absolute inset-0 w-full h-full -z-8 mix-blend-luminosity bg-[radial-gradient(36.8%_50%_at_50%_50%,rgba(10,10,10,0.5)_0%,#0A0A0A_100%)]"
+          ></div>
+
+          <div className='absolute top-0 left-0 -z-10 w-screen h-auto grayscale-100'>
+            <Video
+              src={myVideo3}
+              autoPlay
+              loop
+              muted
+              playsInline
+              controls={false}
+              className="w-full h-full object-cover"
+            />
+          </div>
             <div className='container mx-auto px-[24px] sm:px-0 relative z-5'>
               <h2  className='comprecsupform pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] text-[28px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[52px] text-center'>Genesis Impact <span className='shadow-none text-white/70'>in Numbers</span>
               </h2>

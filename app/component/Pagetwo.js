@@ -4,7 +4,8 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Image from 'next/image';
 import { useEffect, useRef } from 'react';
-import numbeingss from './image/Frame 2147225683.png';
+import Video from 'next-video';
+import myVideo4 from '../../videos/5_Astronaut.mp4';
 import image7 from './image/Frame 2085662528.png';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -260,7 +261,18 @@ const itemsRef = useRef([]);
                 </h2>
                 <p className='bitstartpsss text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]'>With the Genesis $GXN token, every project incubated generates community-driven rewards. Through staking and revenue-sharing pools, users benefit from continuous returns.</p>
                 <div className='vibesstyle relative p-[16px] sm:p-[20px] md:p-[24px] lg:p-[32px] xl:p-[36px] 2xl:p-[40px] mt-[16px] sm:mt-[20px] md:mt-[24px] lg:mt-[32px] xl:mt-[36px] 2xl:mt-[40px] overflow-hidden'>
-                  <Image className='absolute left-0 top-0 -z-px grayscale-100 object-cover h-full w-full' src={image7} alt='Leading...'/>
+                  <div class="absolute inset-0 -z-9 mix-blend-luminosity bg-[linear-gradient(280deg,rgba(10,10,10,0)_22.74%,#0A0A0A_80.78%)]"></div>
+                  <div className='absolute top-0 right-0 -z-10 w-auto h-full scale-x-[-1] grayscale-100'>
+                    <Video
+                      src={myVideo4}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controls={false}
+                      className="w-full h-full object-cover "
+                    />
+                  </div>
                   <div className="space-y-6 sm:pr-[30%]">
                   <ul className="relative z-10 flex flex-col gap-[14px] sm:gap-[15px] md:gap-[16px] lg:gap-[20px] xl:gap-[24px] 2xl:gap-[32px]">
                     {data.map((item, i) => (
@@ -282,7 +294,18 @@ const itemsRef = useRef([]);
                   </div>
                 </div>
                 <div className='flex items-center justify-center mt-[24px] sm:mt-[32px] md:mt-[36px] lg:mt-[40px] xl:mt-[48px] 2xl:mt-[64px]'>
-                <button className='nowbygxn text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px]'>Buy $GXN Now</button>
+                <button className='buttonauditelt relative  cursor-pointer flex items-center  group gap-[7.50px] group duration-300'>
+                  <div className="relative overflow-hidden h-full flex items-center justify-center">
+                    <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
+                    Stake $GXN →
+                    </span>
+                    <span className="opacity-0">Stake $GXN →</span>
+
+                    <span className="absolute bottom-[-20px] opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                    Stake $GXN →
+                    </span>
+                  </div>
+                </button>
               </div>
               </div>
            </div>

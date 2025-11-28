@@ -12,6 +12,8 @@ import cardlogoone from './image/Frame 2085662521.png';
 import cardlogotwo from './image/Frame 20856625sss21.png';
 import cardlogothree from './image/Frame 2085aaa662521.png';
 import cardlogofore from './image/Frame 208566sss2521.png';
+import Video from 'next-video';
+import myVideo4 from '../../videos/4_Astronaut.mp4';
 
 
 const cardData = [
@@ -146,7 +148,18 @@ useEffect(() => {
               </h2>
               <p className='bitstartpsss text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] mb-[14px] sm:mb-[15px] md:mb-[16px] lg:mb-[20px] xl:mb-[24px] 2xl:mb-[32px] text-center'>Join our tokenomics ecosystem and be part of the Web3 <br className='sm:block hidden'/> incubation revolution.</p>
               <div className='flex items-center justify-center'>
-                <button className='nowbygxn text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] xl:text-[15px] 2xl:text-[16px] py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px]'>Buy $GXN Now</button>
+                <button className='buttonauditelt relative  cursor-pointer flex items-center  group gap-[7.50px] group duration-300'>
+                  <div className="relative overflow-hidden h-full flex items-center justify-center">
+                    <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
+                    Buy $GXN Now
+                    </span>
+                    <span className="opacity-0">Buy $GXN Now</span>
+
+                    <span className="absolute bottom-[-20px] opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                    Buy $GXN Now
+                    </span>
+                  </div>
+                </button>
               </div>
               <div className='grid grid-cols-1 sm:grid-cols-2 items-center sm:items-start justify-center sm:justify-between mt-[32px] sm:mt-[36px] md:mt-[40px] lg:mt-[48px] xl:mt-[64px] 2xl:mt-[84px] '>
                 <div className='flex sm:block items-center jsutify-center sm:flex-row flex-col'>
@@ -212,7 +225,18 @@ useEffect(() => {
           </linearGradient>
           </defs>
           </svg>
-           <Image className="w-full absolute bottom-0 left-0 -z-2" src={imageoneback} alt="Loading.."/>
+          <div className="mix-blend-luminosity bg-[linear-gradient(90deg,rgba(10,10,10,0)_22.74%,#0A0A0A_80.78%)] absolute top-0 left-0 w-full h-full -z-9"></div>
+           <div className='absolute top-0 right-0 -z-10 w-screen h-full scale-x-[-1] grayscale-100'>
+              <Video
+                src={myVideo4}
+                autoPlay
+                loop
+                muted
+                playsInline
+                controls={false}
+                className="w-full h-full object-cover "
+              />
+            </div>
         </div>
     );
 };

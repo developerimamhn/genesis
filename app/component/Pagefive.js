@@ -3,7 +3,8 @@
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
-import backgroundimagnoe from './image/1777935_Galaxy_Cosmos_3840x2160 1.png';
+import Video from 'next-video';
+import myVideo1 from '../../videos/3_Astronaut.mp4.mp4';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -176,7 +177,7 @@ const Pagefive = () => {
   }, []);
 
   return (
-    <div id="Blog" className="relative py-[41px] sm:py-[51px] md:py-[68px] lg:py-[98px] xl:py-[124px] 2xl:py-[145px]  ">
+    <div id="Blog" className="relative py-[41px] sm:py-[51px] md:py-[68px] lg:py-[98px] xl:py-[124px] 2xl:py-[145px]  overflow-hidden">
       <svg className='w-full absolute left-0 top-0 object-fit z-2' viewBox="0 0 1726 390" fill="none" xmlns="http://www.w3.org/2000/svg">
       <rect width="1726" height="390" fill="url(#paint0_linear_477_19)"/>
       <defs>
@@ -196,8 +197,18 @@ const Pagefive = () => {
       </defs>
       </svg>
 
-
-      <Image className='w-full h-full absolute left-0 top-0 object-fit -z-px' src={backgroundimagnoe} alt='Loading...'/>
+      <div className='absolute top-0 left-0 -z-10 w-screen h-auto'>
+        <Video
+          src={myVideo1}
+          autoPlay
+          loop
+          muted
+          playsInline
+          controls={false}
+          className="w-full h-full object-cover"
+        />
+      </div>
+      {/* <Image className='w-full h-full absolute left-0 top-0 object-fit -z-px' src={backgroundimagnoe} alt='Loading...'/> */}
       <div className='container mx-auto relative z-5 sm:px-0 px-6'>
         <div className='flex items-center justify-center flex-col '>
           <button className="topethreaincobtn text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] relative group duration-500">
@@ -207,14 +218,34 @@ const Pagefive = () => {
               <svg xmlns="http://www.w3.org/2000/svg" className="h-full absolute top-0 left-0 group-hover:-left-0.5 group-hover:scale-120 duration-400" viewBox="0 0 13 47" fill="none">
                 <path d="M12.3999 46.4H0.399902V34.9M0.399902 11.9V0.400024C5.92861 0.400024 7.25017 0.400024 12.3999 0.400024" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
               </svg>
-              Incubated Projects
+              <div className="relative overflow-hidden h-full flex items-center justify-center">
+                  <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
+                  Incubated Projects
+                  </span>
+                  <span className="opacity-0">Explore SparkStarter</span>
+
+                  <span className="absolute bottom-[-20px] opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                  Incubated Projects
+                  </span>
+              </div>
           </button>
           <span >
           <h2  className="tradines text-center text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-10">
             Success Stories, <span className="text-white/70!"> Our <br className="sm:block hidden" /> Past Incubations</span>
           </h2></span>
           <p ref={textRefs} className='bitstartp text-[12px] text-center sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-3 md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[30px]'>We help blockchain startups and crypto projects launch securely with proven incubation, <br className='lg:block hidden'/> tokenomics design, KYC, and long-term growth strategies.</p>
-          <button className='viewallinsteaeds hover:scale-105 duration-200  cursor-pointer py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] backdrop-blur-lg '>View All Incubated <span className='opacity-0 select-none'>a</span> →</button>
+          <button className='viewallinsteaeds hover:scale-105 duration-200  cursor-pointer py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] backdrop-blur-lg '>
+            <div className="relative overflow-hidden h-full flex items-center justify-center">
+                  <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
+                  View All Incubated →
+                  </span>
+                  <span className="opacity-0">View All Incubated →</span>
+
+                  <span className="absolute bottom-[-20px] opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
+                  View All Incubated →
+                  </span>
+              </div>
+            </button>
         </div>
         <div className='prmdash grid grid-cols-3 2xl:mx-[385px] gap-[14px] sm:gap-[15px] md:gap-[16px] lg:gap-[20px] xl:gap-[24px] 2xl:gap-[32px] mt-[14px] sm:mt-[15px] md:mt-[16px] lg:mt-[20px] xl:mt-[24px] 2xl:mt-[32px] bg-[#00000077]'>
           <div class="absolute z-px left-0 top-0 block h-full w-full animate-gradient bg-linear-to-t from-white/20 via-white/5 to-white/20 bg-size-[var(--bg-size)_100%] rounded-[inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px mask-subtract! "></div>

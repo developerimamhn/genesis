@@ -4,7 +4,9 @@
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useEffect, useRef } from "react";
-import imageone from './image/5265383_Light_Tunnel_Vj_Loop_3840x2160 1.png';
+// import imageone from './image/5265383_Light_Tunnel_Vj_Loop_3840x2160 1.png';
+import Video from 'next-video';
+import myVideo0 from '../../videos/2_Astronaut.mp4';
 import Image from 'next/image';
 
 gsap.registerPlugin(ScrollTrigger);
@@ -158,9 +160,21 @@ useEffect(() => {
             </div>
             <div  className="grid sm:grid-cols-2 gap-[11px] sm:gap-3 md:gap-[13px] lg:gap-3.5 xl:gap-[15px] 2xl:gap-4">
               <div  className="relative containexrtmiss col-span-1 w-full overflow-hidden">
-                <div className="absolute bottom-0 left-0 filtebluasee -z-1 w-full rounded-b-3xl h-2/5 ">
+                <div className="absolute bottom-0 left-0 filtebluasee -z-1 w-full rounded-b-3xl h-2/5 "></div>
+                <div className="absolute inset-0 w-full h-full -z-1 mix-blend-luminosity bg-[linear-gradient(58deg,rgba(10,10,10,0.10)_13.26%,#0A0A0A_60.85%)]"></div>
+
+                {/* <Image className="w-full h-full object-cover absolute top-0 left-0 -z-2 select-none" src={imageone} alt='Loading...'/> */}
+                <div className='absolute top-0 left-0  -z-10 w-screen 2xl:w-[75vw] h-auto'>
+                  <Video
+                    src={myVideo0}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    controls={false}
+                    className="w-full h-full object-cover"
+                  />
                 </div>
-                <Image className="w-full h-full object-cover absolute top-0 left-0 -z-2 select-none" src={imageone} alt='Loading...'/>
                 <div class="absolute z-px left-0 top-0 block h-full w-full animate-gradient bg-linear-to-t from-white/20 via-white/5 to-white/20 bg-size-[var(--bg-size)_100%] rounded-[inherit] [mask:linear-gradient(#fff_0_0)_content-box,linear-gradient(#fff_0_0)] p-px mask-subtract! "></div>
                 <h3 className="misssfasttea animate-text">
                   <span className="text-white/60">What Is</span> <div className="text-white">Genesis Mission?</div>

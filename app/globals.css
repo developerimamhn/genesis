@@ -344,6 +344,7 @@ body {
     letter-spacing: 3.6px;
     text-transform: uppercase;
     background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blour;
   }
   .topethreaincobtn {
     @apply px-[13px] sm:px-[14px] md:px-[15px] lg:px-[16px] xl:px-[20px] 2xl:px-[24px] py-[7px] md:py-[9px] xl:py-[12px];
@@ -638,11 +639,11 @@ body {
     font-weight: 500;
     line-height: 130%;
   }
-  .customizecollro {
+  /* .customizecollro {
     background: url(./component/image/headerimage.png);
     background-size: cover;
     background-repeat: no-repeat;
-  }
+  } */
   .sauendinas {
     border-radius: 24px 24px 0 0;
     background: rgba(255, 255, 255, 0.04);
