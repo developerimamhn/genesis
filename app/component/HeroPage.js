@@ -156,7 +156,7 @@ const HeroPage = () => {
                             <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
                             Launch Your Project Today
                             </span>
-                            <span className="opacity-0">Explore SparkStarter</span>
+                            <span className="opacity-0">Launch Your Project Today</span>
 
                             <span className="absolute bottom-[-20px] opacity-0 group-hover:bottom-0 group-hover:opacity-100 transition-all duration-700 ease-in-out">
                             Launch Your Project Today
@@ -166,7 +166,7 @@ const HeroPage = () => {
                         <button className="growingstabtn group overflow-hidden  relative backdrop-blur-xl">
                         <div className="relative overflow-hidden h-full flex items-center justify-center">
                             <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
-                            Get Started
+                            Explore SparkStarter
                             </span>
                             <span className="opacity-0">Explore SparkStarter</span>
 
