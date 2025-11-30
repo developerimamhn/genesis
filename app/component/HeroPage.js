@@ -163,7 +163,7 @@ const HeroPage = () => {
                             </span>
                         </div>
                         </button>
-                        <button className="growingstabtn group overflow-hidden  relative backdrop-blur-xl">
+                        <button className="growingstabtn group overflow-hidden backdrop-blur-2xl relative ">
                         <div className="relative overflow-hidden h-full flex items-center justify-center">
                             <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">
                             Explore SparkStarter

@@ -5,6 +5,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { useEffect, useRef } from 'react';
 import Video from 'next-video';
 import myVideo1 from '../../videos/3_Astronaut.mp4.mp4';
+import { sectionAnimation } from './animations/sectionAnimation.js';
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -12,7 +13,6 @@ import Image from 'next/image';
 
 const Pagefive = () => {
    const textRef = useRef(null);
-
   useEffect(() => {
     if (!textRef.current) return;
 
@@ -60,9 +60,7 @@ const Pagefive = () => {
       },
     });
   }, []);
-
   const textRefs = useRef(null);
-
   useEffect(() => {
     gsap.fromTo(
       textRefs.current,
@@ -76,9 +74,7 @@ const Pagefive = () => {
       }
     );
   }, []);
-
-    const imgRef = useRef(null);
-
+  const imgRef = useRef(null);
   useEffect(() => {
     gsap.fromTo(
       imgRef.current,
@@ -175,7 +171,18 @@ const Pagefive = () => {
 
     counters.forEach((counter) => observer.observe(counter));
   }, []);
+  const elementsRef = useRef([]);
+  elementsRef.current = [];
 
+  const addToRefs = (el) => {
+    if (el && !elementsRef.current.includes(el)) {
+      elementsRef.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    sectionAnimation(elementsRef.current);
+  }, []);
   return (
     <div id="Blog" className="relative py-[41px] sm:py-[51px] md:py-[68px] lg:py-[98px] xl:py-[124px] 2xl:py-[145px]  overflow-hidden">
       <svg className='w-full absolute left-0 top-0 object-fit z-2' viewBox="0 0 1726 390" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -210,7 +217,7 @@ const Pagefive = () => {
       </div>
       {/* <Image className='w-full h-full absolute left-0 top-0 object-fit -z-px' src={backgroundimagnoe} alt='Loading...'/> */}
       <div className='container mx-auto relative z-5 sm:px-0 px-6'>
-        <div className='flex items-center justify-center flex-col '>
+        <div ref={addToRefs} className='flex items-center justify-center flex-col '>
           <button className="topethreaincobtn text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] relative group duration-500">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-full absolute top-0 right-0 group-hover:-right-0.5 group-hover:scale-120 duration-400" viewBox="0 0 13 47" fill="none">
                 <path d="M0.399902 46.4H12.3999V34.9M12.3999 11.9V0.400024C6.87119 0.400024 5.54964 0.400024 0.399902 0.400024" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
@@ -230,10 +237,10 @@ const Pagefive = () => {
               </div>
           </button>
           <span >
-          <h2  className="tradines text-center text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-10">
+          <h2  ref={addToRefs} className="tradines text-center text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-10">
             Success Stories, <span className="text-white/70!"> Our <br className="sm:block hidden" /> Past Incubations</span>
           </h2></span>
-          <p ref={textRefs} className='bitstartp text-[12px] text-center sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-3 md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[30px]'>We help blockchain startups and crypto projects launch securely with proven incubation, <br className='lg:block hidden'/> tokenomics design, KYC, and long-term growth strategies.</p>
+          <p ref={addToRefs} className='bitstartp text-[12px] text-center sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-3 md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] pb-[14px] sm:pb-[15px] md:pb-[16px] lg:pb-[20px] xl:pb-[24px] 2xl:pb-[30px]'>We help blockchain startups and crypto projects launch securely with proven incubation, <br className='lg:block hidden'/> tokenomics design, KYC, and long-term growth strategies.</p>
           <button className='viewallinsteaeds hover:scale-105 duration-200  cursor-pointer py-[11px] sm:py-[12px] md:py-[13px] lg:py-[14px] xl:py-[15px] 2xl:py-[16px] px-[14px] sm:px-[15px] md:px-[16px] lg:px-[20px] xl:px-[24px] 2xl:px-[32px] backdrop-blur-lg '>
             <div className="relative overflow-hidden h-full flex items-center justify-center">
                   <span className="absolute top-0 opacity-100 group-hover:opacity-0 group-hover:-translate-y-3 transition-all duration-700 ease-in-out">

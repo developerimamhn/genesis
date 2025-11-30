@@ -2,11 +2,11 @@
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import React, { useEffect, useRef } from "react";
 gsap.registerPlugin(ScrollTrigger);
 import Video from 'next-video';
 import myVideo3 from '../../videos/4_Astronaut.mp4';
+import { h2Animation } from './animations/h2Animation.js';
 
 const data = [
   {
@@ -146,6 +146,9 @@ const Pageone = () => {
   { project: "Zentium", revenue: "$12,697", volume: "1.1 Million" },
   { project: "Rollback", revenue: "$8,663", volume: "$530K" },
   ];
+  useEffect(() => {
+    h2Animation();
+  }, []);
     return (
         <div  id='About'  className='relative w-full pb-[36px] sm:pb-[40px] md:pb-[48px] lg:pb-[64px] xl:pb-[96px] 2xl:pb-[130px] pt-[36px] sm:pt-[40px] md:pt-[48px] lg:pt-[64px] xl:pt-[96px] 2xl:pt-[123px] overflow-hidden'>
           <svg className='w-full absolute left-0 top-0 object-fit z-2' viewBox="0 0 1726 390" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -182,7 +185,7 @@ const Pageone = () => {
             />
           </div>
             <div className='container mx-auto px-[24px] sm:px-0 relative z-5'>
-              <h2  className='comprecsupform pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] text-[28px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[52px] text-center'>Genesis Impact <span className='shadow-none text-white/70'>in Numbers</span>
+              <h2  className='comprecsupform animate-h2 pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] text-[28px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[52px] text-center'>Genesis Impact <span className='shadow-none text-white/70'>in Numbers</span>
               </h2>
                <div className="w-full flex justify-center px-[24px] lg:px-[50px] xl:px-[320px]">
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-white w-full mt-[32px] sm:mt-[36px] md:mt-[40px] lg:mt-[48px] xl:mt-[64px] 2xl:mt-[88px]">

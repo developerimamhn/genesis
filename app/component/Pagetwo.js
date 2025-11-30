@@ -2,11 +2,10 @@
 
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import Video from 'next-video';
 import myVideo4 from '../../videos/5_Astronaut.mp4';
-import image7 from './image/Frame 2085662528.png';
+import { h2Animation } from './animations/h2Animation.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -243,6 +242,9 @@ const itemsRef = useRef([]);
       );
     });
   }, []);
+    useEffect(() => {
+    h2Animation();
+  }, []);
     return (
         <div id='About' ref={wrapperRef} className='py-[40px] sm:py-[40px] md:py-[48px] lg:py-[64px] xl:py-[96px] 2xl:py-[120px] px-6 sm:px-0 relative overflow-hidden'>
            <div className='container mx-auto xl:px-[270px]'>
@@ -256,10 +258,10 @@ const itemsRef = useRef([]);
                   </svg>
                   Revenue
                 </button>
-                <h2 className="tradines  text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-[12px] sm:mt-[13px] md:mt-[14px] lg:mt-[15px] xl:mt-[16px] 2xl:mt-[20px]">
+                <h2 className="tradines animate-h2 text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-[12px] sm:mt-[13px] md:mt-[14px] lg:mt-[15px] xl:mt-[16px] 2xl:mt-[20px]">
                   How Our Revenue  <span className="text-white/70!">Model Works</span>
                 </h2>
-                <p className='bitstartpsss text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]'>With the Genesis $GXN token, every project incubated generates community-driven rewards. Through staking and revenue-sharing pools, users benefit from continuous returns.</p>
+                <p className='bitstartpsss animate-h2 text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]'>With the Genesis $GXN token, every project incubated generates community-driven rewards. Through staking and revenue-sharing pools, users benefit from continuous returns.</p>
                 <div className='vibesstyle relative p-[16px] sm:p-[20px] md:p-[24px] lg:p-[32px] xl:p-[36px] 2xl:p-[40px] mt-[16px] sm:mt-[20px] md:mt-[24px] lg:mt-[32px] xl:mt-[36px] 2xl:mt-[40px] overflow-hidden'>
                   <div class="absolute inset-0 -z-9 mix-blend-luminosity bg-[linear-gradient(280deg,rgba(10,10,10,0)_22.74%,#0A0A0A_80.78%)]"></div>
                   <div className='absolute top-0 right-0 -z-10 w-auto h-full scale-x-[-1] grayscale-100'>

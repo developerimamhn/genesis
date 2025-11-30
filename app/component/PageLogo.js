@@ -160,7 +160,7 @@ useEffect(() => {
             </div>
             <div  className="grid sm:grid-cols-2 gap-[11px] sm:gap-3 md:gap-[13px] lg:gap-3.5 xl:gap-[15px] 2xl:gap-4">
               <div  className="relative containexrtmiss col-span-1 w-full overflow-hidden">
-                <div className="absolute bottom-0 left-0 filtebluasee -z-1 w-full rounded-b-3xl h-2/5 "></div>
+                <div className="absolute bottom-0 left-0 filtebluasee -z-1 w-full rounded-b-3xl h-full "></div>
                 <div className="absolute inset-0 w-full h-full -z-1 mix-blend-luminosity bg-[linear-gradient(58deg,rgba(10,10,10,0.10)_13.26%,#0A0A0A_60.85%)]"></div>
 
                 {/* <Image className="w-full h-full object-cover absolute top-0 left-0 -z-2 select-none" src={imageone} alt='Loading...'/> */}

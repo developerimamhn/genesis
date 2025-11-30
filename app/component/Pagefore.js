@@ -7,11 +7,10 @@ import { useEffect, useRef } from 'react';
 import dowDebian from "./image/dowDebian.png";
 import dowFedora from "./image/dowFedora.png";
 import dowLinux from "./image/dowLinux.png";
-import dowMac from "./image/dowMac.png";
 import dowUbuntu from "./image/dowUbuntu.png";
-import imageone from './image/Figure - Abstract Dots → 1xOqMa4sAAwBCrdkiSJfIXups.png.png';
 import dow from './image/litecionlaodin.png';
 import imagesefvce from './image/image sdasd14.png';
+import { sectionAnimation } from './animations/sectionAnimation.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -140,13 +139,24 @@ const cardsRef = useRef([]);
     });
   }, []);
 
+  const elementsRef = useRef([]);
+  elementsRef.current = [];
 
+  const addToRefs = (el) => {
+    if (el && !elementsRef.current.includes(el)) {
+      elementsRef.current.push(el);
+    }
+  };
+
+  useEffect(() => {
+    sectionAnimation(elementsRef.current);
+  }, []);
   return (
     <div
       id="howitworks" className=" relative   pb-[40px] sm:pb-[40px] md:pb-[48px] lg:pb-[64px] xl:pb-[100px] 2xl:!pb-[130px]">
         {/* <div className='leadingsectionarea w-full h-full absolute bottom-0 left-0'></div> */}
         <div className='container mx-auto px-6 xl:px-[270px]'>
-          <div className='flex items-start justify-start relative py-[36px] sm:py-[40px] md:py-[48px] lg:py-[64px] xl:py-[96px] 2xl:py-[128px] flex-col'>
+          <div  className='flex items-start justify-start relative py-[36px] sm:py-[40px] md:py-[48px] lg:py-[64px] xl:py-[96px] 2xl:py-[128px] flex-col'>
             <button className="topethreaincobtn text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] relative group duration-500">
               <svg xmlns="http://www.w3.org/2000/svg" className="h-full absolute top-0 right-0 group-hover:-right-0.5 group-hover:scale-120 duration-400" viewBox="0 0 13 47" fill="none">
                 <path d="M0.399902 46.4H12.3999V34.9M12.3999 11.9V0.400024C6.87119 0.400024 5.54964 0.400024 0.399902 0.400024" stroke="white" stroke-width="0.8" stroke-linecap="round"/>
@@ -156,7 +166,7 @@ const cardsRef = useRef([]);
               </svg>
               Incubated Projects
           </button>
-          <h2  className='comprecsupform pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[52px]'>Comprehensive Support<br className='sm:block hidden'/> <span className='shadow-none text-white/70'>for Every Project</span></h2>
+          <h2 ref={addToRefs} className='comprecsupform pt-[13px] sm:pt-[14px] md:pt-[15px] lg:pt-[16px] xl:pt-[20px] 2xl:pt-[24px] text-[20px] sm:text-[24px] md:text-[32px] lg:text-[36px] xl:text-[40px] 2xl:text-[52px]'>Comprehensive Support<br className='sm:block hidden'/> <span className='shadow-none text-white/70'>for Every Project</span></h2>
           <p ref={textRef} className='gensiloundces text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] sm:w-[67%] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px]'>Genesis Incubations is your launchpad to success in the blockchain and DeFi space, offering a comprehensive suite of services designed to ensure secure, transparent, and community-driven project launches. </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6  sm:px-0 px-6 overflow-hidden ">

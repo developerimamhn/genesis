@@ -10,13 +10,12 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import frameone from './image/Frame 2147225480.png';
 import frametwo from './image/Frame 2147225478.png';
 import framethree from './image/Frame 2147225479.png';
+import { h2Animation } from './animations/h2Animation.js';
 
 gsap.registerPlugin(ScrollTrigger);
 
 
 import Image from 'next/image';
-import imagedoted from './image/Figure - Abstract Dots → 1xOqMa4sAAwBCscscsrdkiSJfIXups.png.png';
-import imageone from './image/Frame 19.png';
 
 const Pagethree = () => {
   const swiperRef = useRef(null);
@@ -42,6 +41,9 @@ const Pagethree = () => {
       );
     });
   }, []);
+    useEffect(() => {
+      h2Animation();
+    }, []);
   return (
     <div id="Blog" className="relative py-8 sm:py-9 md:py-10 lg:py-12 xl:py-16 2xl:py-[100px]">
       
@@ -55,10 +57,10 @@ const Pagethree = () => {
         </svg>
         Team
       </button>
-      <h2 className="tradines  text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-[12px] sm:mt-[13px] md:mt-[14px] lg:mt-[15px] xl:mt-[16px] 2xl:mt-[20px]">
+      <h2 className="tradines animate-h2 text-[24px] sm:text-[32px] md:text-[36px] lg:text-[40px] xl:text-[48px] 2xl:text-[52px] font-bold  mt-[12px] sm:mt-[13px] md:mt-[14px] lg:mt-[15px] xl:mt-[16px] 2xl:mt-[20px]">
         Meet the <span className="text-white/70!">Builders</span>
       </h2>
-      <p className='bitstartpsss text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] mb-[24px] sm:mb-[32px] md:mb-[36px] lg:mb-[40px] xl:mb-[48px] 2xl:mb-[64px]'>A diverse team of blockchain veterans, advisors, and community leaders.</p>
+      <p className='bitstartpsss animate-h2 text-white/80 text-[12px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] 2xl:text-[18px] pt-[11px] sm:pt-[12px] md:pt-[13px] lg:pt-[14px] xl:pt-[15px] 2xl:pt-[16px] mb-[24px] sm:mb-[32px] md:mb-[36px] lg:mb-[40px] xl:mb-[48px] 2xl:mb-[64px]'>A diverse team of blockchain veterans, advisors, and community leaders.</p>
         <Swiper
           slidesPerView={3}
           spaceBetween={30}
